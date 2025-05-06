@@ -1,0 +1,27 @@
+body {
+  background-color: #f2f4f8;
+}
+
+td, th {
+  vertical-align: middle !important;
+}
+
+.status-default {
+  background-color: #fff;
+}
+
+.status-coming {
+  background-color: #fff3cd; /* Yellow */
+}
+
+.status-due {
+  background-color: #f8d7da; /* Red */
+}
+
+.status-done {
+  background-color: #d4edda; /* Green */
+}
+.status-its-time {
+  background-color: #cce5ff; /* Blue */
+}
+
