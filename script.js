@@ -106,17 +106,19 @@ function renderTasks() {
       const row = document.createElement('tr');
       row.classList.add(task.statusClass);
       row.innerHTML = `
-        <td>${task.title}</td>
-        <td>${task.description || ''}</td>
-        <td>${task.dueDate || ''}</td>
-        <td>${task.dueTime || ''}</td>
-        <td>${task.category || ''}</td>
-        <td>${task.status}</td>
-        <td>
-          ${!task.isDone ? `<button class="btn btn-success btn-sm me-2" onclick="markDone(${task.index})">Done</button>` : ''}
-          <button class="btn btn-warning btn-sm me-2" onclick="editTask(${task.index})">Edit</button>
-          <button class="btn btn-danger btn-sm" onclick="deleteTask(${task.index})">Delete</button>
-        </td>`;
+      <td data-label="Title">${task.title}</td>
+      <td data-label="Description">${task.description || ''}</td>
+      <td data-label="Date">${task.dueDate || ''}</td>
+      <td data-label="Time">${task.dueTime || ''}</td>
+      <td data-label="Category">${task.category || ''}</td>
+      <td data-label="Status">${task.status}</td>
+      <td data-label="Actions">
+        ${!task.isDone ? `<button class="btn btn-success btn-sm me-2" onclick="markDone(${task.index})">Done</button>` : ''}
+        <button class="btn btn-warning btn-sm me-2" onclick="editTask(${task.index})">Edit</button>
+        <button class="btn btn-danger btn-sm" onclick="deleteTask(${task.index})">Delete</button>
+      </td>
+    `;
+
       tbody.appendChild(row);
     });
   }
